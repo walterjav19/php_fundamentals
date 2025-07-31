@@ -9,11 +9,8 @@ use Symfony\Component\Routing\Attribute\Route;
 final class UserController extends AbstractController
 {
 
-    public function index(): JsonResponse
+    public function index()
     {
-        return $this->json([
-            'message' => 'user controller',
-            'path' => 'src/Controller/UserController.php',
-        ]);
+       return $this->render('user/users.html.twig');
     }
 }
