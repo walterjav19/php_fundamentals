@@ -3,7 +3,19 @@ controllers:
         path: ../src/Controller/
         namespace: App\Controller
     type: attribute
-user_index:
+getUsers:
     path: /user
-    controller: App\Controller\UserController::index
+    controller: App\Controller\UserController::getUsers
     methods: [GET]
+createUser:
+    path: /user/create
+    controller: App\Controller\UserController::createUser
+    methods: [POST,GET]
+deleteUser:
+    path: /user/delete/{id}
+    controller: App\Controller\UserController::deleteUser
+    methods: [GET]
+editUser:
+    path: /user/edit/{id}
+    controller: App\Controller\UserController::editUser
+    methods: [GET,POST]
