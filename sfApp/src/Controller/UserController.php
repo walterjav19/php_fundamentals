@@ -26,7 +26,7 @@ final class UserController extends AbstractController
 
     public function getUsers(UsersRepository $usersRepository): Response
     {
-
+        
          $users = $usersRepository->findBy(
             ['status' => 1], // Filtrar por usuarios activos
             ['id' => 'DESC'] // Ordenar por ID de forma descendente 
@@ -104,6 +104,9 @@ final class UserController extends AbstractController
         // Guardar los cambios
         $entityManager->persist($user);
         $entityManager->flush();
+
+
+        
 
         return $this->redirectToRoute('getUsers');    
  

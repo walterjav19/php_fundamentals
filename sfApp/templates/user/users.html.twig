@@ -30,8 +30,8 @@
                     <td>{{ user.email }}</td>
                     <td>{{ user.password }}</td>
                     <td>
-                     <form method="get" action="{{ path('deleteUser', {'id': user.id}) }}" style="display:inline">
-                        <button type="button" class="btn btn-outline-primary">Editar</button>
+                     <form method="get" action="{{ path('editUser',     {'id': user.id}) }}" style="display:inline">
+                        <button type="submit" class="btn btn-outline-primary">Editar</button>
                     </form>
                    <form method="get" action="{{ path('deleteUser', {'id': user.id}) }}" style="display:inline">
                         <button type="submit" class="btn btn-outline-danger">Eliminar</button>
